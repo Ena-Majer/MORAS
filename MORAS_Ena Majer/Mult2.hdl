@@ -1,0 +1,15 @@
+CHIP Mult2{
+// x * 2 ==  x + x
+//x - nenegativan cijeli broj
+	IN in[16];
+	OUT out[16];
+	
+	PARTS:
+	//na 3. vjezbama implementirali smo chip Add16 koji je za dva cijela broja
+	//vracala novi zbroj ta dva broja
+	//s time da su i rezultat i uneseni brojevi bili iz 16-bitne sabirnice
+	//pa se mozemo posluziti tim cipom
+	
+	Add16(a = in, b = in, out = out);
+
+}

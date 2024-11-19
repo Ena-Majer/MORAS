@@ -1,0 +1,11 @@
+CHIP Zad1b{
+//!(!x && y && z) && !(x && y && !z) && (x && !y && z) = x && !y && z
+	IN x,y,z;
+	OUT out;
+	
+	PARTS:
+	Not(in = y, out = notY);
+	
+	And(a = x, b = notY, out = xAndNoty);
+	And(a = xAndNoty, b = z, out = out);
+}
